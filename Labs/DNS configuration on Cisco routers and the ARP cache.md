@@ -2,7 +2,7 @@
 
 ## Configure the Routers as DNS Clients
 The DNS server in this example has been assigned the IP Address on 10.10.10.10/24. The DNS server is able to resolve DNS request for 'R1', 'R2', and 'R3'. There is no domain name in use.
-Our first objectives is:
+Our first objectives are:
 - To configure 'R1', 'R2', and 'R3' to use 10.10.10.10/24 as their DNS server
 -  Verify that you can ping R2 and R3 from R1 using their hostnames 'R2' and 'R3'
 -  Verify that you can ping R1 and R2 from R3 using their hostnames 'R1' and 'R2'
