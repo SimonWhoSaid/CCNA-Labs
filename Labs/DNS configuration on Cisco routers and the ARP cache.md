@@ -19,7 +19,7 @@ Then our second objective is to examine the ARP cache on the routers.
 
 # Router 1
 ## Configuring as a DNS Client
-- Before configuring the router as a DNS client we must enable the router in global configuration. We first do this by entering '_Enable_' which puts the router in Privleged Exec mode, then we input '_Config T_' to get into the global configuration
+- Before configuring the router as a DNS client we must enable the router in global configuration in the CLI. We first do this by entering '_Enable_' which puts the router in Privleged Exec mode, then we input '_Config T_' to get into the global configuration
 >R1>enable
 >
 >R1#config t
