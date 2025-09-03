@@ -13,6 +13,7 @@ Then our second objective is to examine the ARP cache on the routers.
 - Verify the ARP cache on R1, R2, and R3. What do you see?
 
 # Network Topology
+<img width="760" height="482" alt="Cisco Packet Tracer Topology" src="https://github.com/user-attachments/assets/b67f581b-8bb0-44e3-be14-41b61827f611" />
 
 
 # Router 1
