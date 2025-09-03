@@ -64,8 +64,11 @@ We will also test with R3
 To show the ARP cache of a router you must enter the command show arp in privleged exec mode.
 
 When viewing the ARP table for R1 it only shows the IP and MAC addresses of
+
 R1 10.10.10.1
+
 R2 10.10.10.2
+
 DNS Server 10.10.10.10
 
 # Router 2
@@ -87,10 +90,15 @@ We will repeat the process of of what we did with Router 1 on Router 2
 
 ## Router 2 Examining ARP Cache
 When viewing the ARP table for R2 it shows
+
 R1 10.10.10.1
+
 R2 10.10.10.2
+
 DNS Server 10.10.10.10
+
 SW2 10.10.20.1
+
 R3 10.10.20.2
 
 # Router 3 
@@ -112,6 +120,8 @@ Once again we repeat the process of what we did with the other two routers
 
 ## Router 3 Examining ARP Cache
 When viewing the ARP table for R3 it shows
+
 SW2 10.10.20.1
+
 R3 10.10.20.2
 
