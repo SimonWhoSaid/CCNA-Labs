@@ -19,7 +19,7 @@ Then our second objective is to examine the ARP cache on the routers.
 
 # Router 1
 ## Configuring as a DNS Client
-- Before configuring the router as a DNS client we must enable the router in global configuration. We first do this by entering 'Enable' which puts the router in Privleged Exec mode, then we input 'Config T' to get into the global configuration
+- Before configuring the router as a DNS client we must enable the router in global configuration. We first do this by entering '_Enable_' which puts the router in Privleged Exec mode, then we input '_Config T_' to get into the global configuration
 >R1>enable
 >
 >R1#config t
@@ -62,7 +62,7 @@ We will also test with R3
 >?Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
 
 ## Router 1 Examining ARP Cache
-To show the ARP cache of a router you must enter the command show arp in privleged exec mode.
+To show the ARP cache of a router you must enter the command ***show arp*** in *privleged exec mode*.
 
 When viewing the ARP table for R1 it only shows the IP and MAC addresses of
 
