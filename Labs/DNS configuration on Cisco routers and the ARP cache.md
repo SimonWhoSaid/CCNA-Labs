@@ -19,53 +19,61 @@ Then our second objective is to examine the ARP cache on the routers.
 # Router 1
 ## Configuring as a DNS Client
 - Before configuring the router as a DNS client we must enable the router in global configuration. We first do this by entering 'Enable' which puts the router in Privleged Exec mode, then we input 'Config T' to get into the global configuration
-- R1>enable
-
-R1#config t
-
-Enter configuration commands, one per line.  End with CNTL/Z.
+>R1>enable
+>R1#config t
+`
+Enter configuration commands, one per line.  End with CNTL/Z.`
 
 Then we must set up the router to become a DNS client with the following: 
-`R1(config)#ip domain-lookup`
+>R1(config)#ip domain-lookup
 - This enables DNS hostname translation
-`R1(config)#ip name-server 10.10.10.10`
+>R1(config)#ip name-server 10.10.10.10
 - This points the router to the DNS server that is assigned the IP address of 10.10.10.10
 
 ## Router 1 Verifying Ping to R2 and R3
 Next we will exit out of global configuartion mode by typing 'exit' then we will type enable again to enter Privleged Exec mode.
 
 Afterwards we are going to test to see if R1 can ping R2 by it's hostname and get back the IP address
-`R1#Ping R2
-  
-Translating "R2"...domain server (10.10.10.10)
-
-Type escape sequence to abort.
-
-Sending 5, 100-byte ICMP Echos to 10.10.10.2, timeout is 2 seconds:
-
-.!!!!
-
-Success rate is 80 percent (4/5), round-trip min/avg/max = 0/1/4 ms`
+>R1#Ping R2
+>Translating "R2"...domain server (10.10.10.10)
+>Type escape sequence to abort.
+>Sending 5, 100-byte ICMP Echos to 10.10.10.2, timeout is 2 seconds:
+>.!!!!
+>Success rate is 80 percent (4/5), round-trip min/avg/max = 0/1/4 ms
 
 We will also test with R3
-- R1#Ping R3
-  Translating "R3"...domain server (10.10.10.10)
-  Type escape sequence to abort.
-  Sending 5, 100-byte ICMP Echos to 10.10.20.1, timeout is 2 seconds:
-  .!!!!
-  Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
+>R1#Ping R3
+>Translating "R3"...domain server (10.10.10.10)
+>Type escape sequence to abort.
+>Sending 5, 100-byte ICMP Echos to 10.10.20.1, timeout is 2 seconds:
+>.!!!!
+>?Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
 
 ## Router 1 Examining ARP Cache
 
 # Router 2
 ## Router 2 Configuring DNS Server
+We will repeat the process of of what we did with Router 1 on Router 2
+>Enable
+>Config T
+>ip domain-lookup
+>ip name-server 10.10.10.10
+>end
+>Ping R1
+>Ping R3
 
 ## Router 2 Examining ARP Cache
 
 # Router 3 
 ## Router 3 Configuring DNS Server
-
-## Router 3 Verifying Ping to R1 aand R2
+Once again we repeat the process of what we did with the other two routers
+>Enable
+>Config T
+>ip domain-lookup
+>ip name-server 10.10.10.10
+>end
+>Ping R1
+>Ping R2
 
 ## Router 3 Examining ARP Cache
 
