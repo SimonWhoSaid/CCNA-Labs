@@ -36,18 +36,28 @@ Next we will exit out of global configuartion mode by typing 'exit' then we will
 
 Afterwards we are going to test to see if R1 can ping R2 by it's hostname and get back the IP address
 >R1#Ping R2
+
 >Translating "R2"...domain server (10.10.10.10)
+
 >Type escape sequence to abort.
+
 >Sending 5, 100-byte ICMP Echos to 10.10.10.2, timeout is 2 seconds:
+
 >.!!!!
+
 >Success rate is 80 percent (4/5), round-trip min/avg/max = 0/1/4 ms
 
 We will also test with R3
 >R1#Ping R3
+
 >Translating "R3"...domain server (10.10.10.10)
+
 >Type escape sequence to abort.
+
 >Sending 5, 100-byte ICMP Echos to 10.10.20.1, timeout is 2 seconds:
+
 >.!!!!
+
 >?Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
 
 ## Router 1 Examining ARP Cache
@@ -56,11 +66,17 @@ We will also test with R3
 ## Router 2 Configuring DNS Server
 We will repeat the process of of what we did with Router 1 on Router 2
 >Enable
+
 >Config T
+
 >ip domain-lookup
+
 >ip name-server 10.10.10.10
+
 >end
+
 >Ping R1
+
 >Ping R3
 
 ## Router 2 Examining ARP Cache
@@ -69,11 +85,17 @@ We will repeat the process of of what we did with Router 1 on Router 2
 ## Router 3 Configuring DNS Server
 Once again we repeat the process of what we did with the other two routers
 >Enable
+
 >Config T
+
 >ip domain-lookup
+
 >ip name-server 10.10.10.10
+
 >end
+
 >Ping R1
+
 >Ping R2
 
 ## Router 3 Examining ARP Cache
