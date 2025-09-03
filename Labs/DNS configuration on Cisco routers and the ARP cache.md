@@ -72,6 +72,8 @@ R2 10.10.10.2
 
 DNS Server 10.10.10.10
 
+When viewing the ARP table for R1 we only see the R1, R2, and the DNS Server's IP address displayed. This is because they are all within the same subnet. Because a ARP request is broadcast traffic, this means that from R1 it will not reach R3. Instead R1 will know to reach R3 by going through R2 and vice versa.
+
 # Router 2
 ## Router 2 Configuring DNS Server
 We will repeat the process of of what we did with Router 1 on Router 2
@@ -94,13 +96,16 @@ When viewing the ARP table for R2 it shows
 
 R1 10.10.10.1
 
-R2 10.10.10.2
+R2 F0/0 10.10.10.2
 
 DNS Server 10.10.10.10
 
-SW2 10.10.20.1
+R2 F1/0 10.10.20.1
 
 R3 10.10.20.2
+
+Because R2 sits in the middle of everything it will receive ALL ARP request from each device on the network. It will receive request from both the DNS Server and R1 out of interface F0/0 which has the IP address on the 10.10.10.2/24 network. It will also receive
+an ARP request from R3 from interface F1/0 on the 10.10.20.0/24 network.
 
 # Router 3 
 ## Router 3 Configuring DNS Server
@@ -122,7 +127,9 @@ Once again we repeat the process of what we did with the other two routers
 ## Router 3 Examining ARP Cache
 When viewing the ARP table for R3 it shows
 
-SW2 10.10.20.1
+R2 10.10.20.1
 
 R3 10.10.20.2
+
+Once again because R3 and R2 are within the same network they can only see each other. So if R3 wanted to send a packet to R1, it knows to go through R2 in order to send the traffic.
 
