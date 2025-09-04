@@ -4,11 +4,11 @@
 
 We will be exploring the commands used to view the MAC address table and routing table.
 
-#Lab Topology
+# Lab Topology
 <img width="694" height="377" alt="Lab Topology" src="https://github.com/user-attachments/assets/0e823579-4673-4349-b0fe-335179cf8bf0" />
 
 
-#Verify the Switch MAC Address Tables
+# Verify the Switch MAC Address Tables
 
 1. Log into the routers R1-R4 and verify which interface is configured on teh 10.10.10.0/24 network
 
@@ -26,7 +26,7 @@ We will be exploring the commands used to view the MAC address table and routing
 
 8. Show the Dynamic MAC address table on SW1.
 
-#Examin a Routing Table
+# Examine a Routing Table
 
 1. View the routing table on R1.
 
