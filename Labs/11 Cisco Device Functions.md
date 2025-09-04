@@ -18,15 +18,19 @@ To show the configuration of the interfaces on each router you must first
 - Down below are the interface configurations for each router
 
 R1 Configuration
+
 <img width="641" height="256" alt="R1 config" src="https://github.com/user-attachments/assets/0ed6a75b-6c25-41c5-be50-f7f958388914" />
 
 R2 Configuration
+
 <img width="623" height="195" alt="R2 Config" src="https://github.com/user-attachments/assets/5f625840-7220-489a-8125-6ffd52c8d04c" />
 
 R3 Configuration
+
 <img width="660" height="204" alt="R3 Config" src="https://github.com/user-attachments/assets/1a8543e5-d00c-4a77-8c6e-9696b029ded9" />
 
 R4 Configuration
+
 <img width="632" height="176" alt="R4 config" src="https://github.com/user-attachments/assets/f83899bb-5d43-4220-8e9b-57a57044ba00" />
 
 R1, R2, R4 are using interface G0/0 for the 10.10.10.0/24 network while R3 is using G0/1
@@ -40,15 +44,19 @@ Now we must make note of the individual MAC address of each interface.
 - - In R1 example we will be using the command _Show Interface G0/0_. But in R3 we will be using _Show Interface G0/1_
 
 R1 Interface MAC
+
 <img width="572" height="85" alt="R1 MAC" src="https://github.com/user-attachments/assets/411f6ddb-1100-4eb6-9071-9e17942e1efa" />
 
 R2 Interface MAC
+
 <img width="579" height="85" alt="R2 MAC" src="https://github.com/user-attachments/assets/f1a6cc61-2606-49bb-94e3-db6191d9cfd8" />
 
 R3 Interface MAC
+
 <img width="580" height="82" alt="R3 MAC" src="https://github.com/user-attachments/assets/c1a667a3-6183-4685-95da-6c7a134175a7" />
 
 R4 Interface MAC
+
 <img width="577" height="84" alt="R4 MAC" src="https://github.com/user-attachments/assets/4e46ba60-40b2-4ec5-90b5-33fcade3c545" />
 
 
