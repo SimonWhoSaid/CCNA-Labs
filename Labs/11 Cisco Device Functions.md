@@ -62,11 +62,39 @@ R4 Interface MAC
 
 3. Verify connectivity between the routers by pinging R2, R3, and R3 from R1
 
+Enter the ping command and send the pings by the IP addresses
+
+<img width="502" height="298" alt="image" src="https://github.com/user-attachments/assets/c2e8ec3f-cea6-4cf7-92e7-ffc6331b8eaf" />
+
+- Note that we can not ping by their hostname because a DNS server is not configured on this network
+
+<img width="439" height="86" alt="image" src="https://github.com/user-attachments/assets/e7c86d42-19b3-4bc2-ac43-09baff8885f4" />
+
+
 4. Ping R3 and R4 from R2
+
+Repeat the same process with R2
+
+<img width="487" height="206" alt="image" src="https://github.com/user-attachments/assets/befe1981-4b33-4e7e-8bb3-479ba4126942" />
 
 5. View the dynamically learned MAC addresses on SW1 and verify that the router's MAC addresses are reachable through the expected ports
 
+To view the MAC addresses on SW1 we will _Enable_ the switch to enter _Privleged Exec Mode_
+
+Then enter the command _Show MAC Address-table dynamic_
+
+- Dynamic MAC address table entry is automatically learned by the switch from the source MAC address of incoming ethernet frames
+- Static MAC address entry is manually configuring the switch to have those MACs added.
+
+<img width="390" height="217" alt="image" src="https://github.com/user-attachments/assets/789d7663-9448-43b6-be3c-73b0fab40d6a" />
+
+On the MAC address entry we can see that on the switche's interface Fa0/1 belongs to R1, Fa0/2 belongs to R2, and the other devices can be reached out of Fa0/24
+
 6. Repeat on SW2
+
+<img width="350" height="146" alt="image" src="https://github.com/user-attachments/assets/92248b94-12f2-478c-97a7-5a760b9db206" />
+
+Then we repeat the process here and can see the difference in results. Interface Fa0/3 goes to R3, Fa0/4 goes to R4, then the rest of the devices can be reached through Fa0/24
 
 7. Clear the dynamic MAC address table on SW1
 
