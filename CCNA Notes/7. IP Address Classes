@@ -1,0 +1,34 @@
+# IP Address Classes
+
+##Public IP Addresses
+
+Public IP Addresses are mainly used by the ISP/Internet
+
+Class A: 1.0.0.0 - 126.0.0.0/8
+  - Large Networks
+
+Class B: 128.0.0.0 - 191.255.0.0/16
+  - Medium Networks
+
+Class C: 192.0.0.0 - 223.255.255.0/24
+  - Small Networks
+
+##Private IP Addresses
+
+Class A: 10.0.0.0 - 10.255.255.255
+
+Class B: 172.16.0.0 - 172.31.255.255
+
+Class C: 192.168.0.0 - 192.168.255.255
+
+##IP Address Classes D & E
+
+Class D: 224.0.0.0 - 239.255.255.255
+  - Class D is used for Multicast Addresses
+  - Multicast allows to send 1 stream of data instead of multiple streams of data and only devices that belong to that specific multicast group will receive the info.
+
+Class E: 240.0.0.0 - 255.255.255.255
+  - Experimental and reserved for future use
+
+One thing to keep in mind is that routers never forward broadcast traffic.
+Broadcast traffic is only sent out in the same subnet
