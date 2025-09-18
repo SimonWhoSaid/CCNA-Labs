@@ -1,4 +1,4 @@
-<img width="726" height="480" alt="image" src="https://github.com/user-attachments/assets/c7d699e7-9e26-4c67-8829-223b5a5384a7" /><img width="719" height="480" alt="image" src="https://github.com/user-attachments/assets/23e82477-5308-46f8-b18b-4d0d90066754" /># Troubleshoot Connectivity to DNS Server
+# Troubleshoot Connectivity to DNS Server
 
 1. The host with IP address 10.10.10.10 has been configured as a DNS server and should be able to resolve requests for ‘R1’, ‘R2’ and ‘R3’. Members of staff have complained that DNS is not working.
 
