@@ -2,9 +2,7 @@
 
 1. The host with IP address 10.10.10.10 has been configured as a DNS server and should be able to resolve requests for ‘R1’, ‘R2’ and ‘R3’. Members of staff have complained that DNS is not working.
 
-2. From R3, use Telnet to check if the DNS service appears operational on the DNS server at 10.10.10.10.
-
-3. When you have verified that DNS is not working, troubleshoot and fix the problem. You have fixed the problem when R3 can ping R1 by hostname. Note that there may be more than one issue causing the problem.
+2. When you have verified that DNS is not working, troubleshoot and fix the problem. You have fixed the problem when R3 can ping R1 by hostname. Note that there may be more than one issue causing the problem.
 
 # Lab Topology
 
