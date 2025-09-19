@@ -1,0 +1,68 @@
+## Network Characteristics
+-Topology
+
+-Speed
+
+-Cost
+
+-Security
+
+-Availability
+
+-Scalability
+
+-Reliability
+
+# OSI Model
+
+## Layer1 - Physical
+
+  - Deals with bits and ethernet cables
+  - The physical link enables bit transmission between end devices
+  - It defines specifications needed for activating, maintaining, and deactivating the physical link between end devices.
+  
+## 2 - Data-link
+  - Ethernet Frames
+  - MAC addresses
+  - The data link layer defines how data is formatted for transmission and how access to physical media is controlled
+  - Also includes error detection and correction to ensure a reliable delivery of the data
+3 - Network
+Routing Packets
+IP Address
+Network layer provides connectivity and path selection between two host systems that may be located on geographically separated networks
+The layer that manages the connectivity of hosts by providing logical addressing
+4 - Transport
+TCP/UDP
+Ports
+Deals with protocols on how data is transferred
+Transport layer defines services to segment, transfer, and reassemble the data for individual communications between the end devices
+It breaks down large files into smaller segments that are less likely to incur transmission problems
+5 - Session
+The session layer establishes, manages, and terminates sessions between two communicating hosts.
+The session layer also synchronizes dialog between the presentation layers of the two hosts and manages their data exhange
+6 - Presentation
+Ensures that information that is sent at the application layer of one system is readable by the application by the application layer of another system.
+The presentation layer can translate among multiple data formats using a common format
+Computers with different encoding schemes
+7 - Application
+Provides network services to the applications of the end user
+Does not provide services to any other OSI layer
+Establishes the availability of intended communication partners
+It then synchronizes and establishes agreement on procedures for error recovery and control of data integrity
+TCP/IP
+Only uses 4 layers
+1 - Link
+Controls the hardware devices and media that make up the network
+2 - Internet
+Provides logical addressing and determines the best path through the network
+3 - Transport
+Supports communication between end devices across a diverse network
+4 - Application
+Represents data users, encodes and controls the dialog
+Protocol Data Unit (PDU)
+When two hosts talk to each other they’re going to be exchanging PDUs
+The PDU is the entire communication of Layer 7 to Layer 1
+In the TCP/IP Stack Layer 4 is the data
+Layer 3 - Segments
+Layer 2 - Packet
+Layer 1 - Frames
