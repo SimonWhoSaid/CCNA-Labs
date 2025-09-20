@@ -1,0 +1,31 @@
+# Basic Router and Switch Configuration
+
+We will be learning about basic configurations to put on our routers and switches
+
+## Router Configuration
+
+A Router provides connectivity between different IP subnets.
+So Routers interfaces must be configued with IP addresses within that subnet. That interface will act as the default gateway for that subnet
+
+To put an IP address on an interface we must first go to that interface in the command line
+
+We will enter the interface
+
+- interface F0/0 (from config t)
+
+Then we enter the IP address and subnet mask
+
+- 192.168.0.1 255.255.255.0
+
+Then we enter the no shutdown command to bring the interface online. Interfaces are shutdown by default
+
+- no shutdown
+
+Next we must also configure another interface so that it can talk to another subnet.
+
+- interface F0/1
+- 192.168.1.1 255.255.255.0
+- no shutdown
+
+Now our two networks, 192.168.0.0 network and 192.168.1.0 network, can not communicate with each other.
+
