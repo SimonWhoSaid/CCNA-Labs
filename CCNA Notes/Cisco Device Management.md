@@ -1,0 +1,46 @@
+# The Boot Up Process
+
+## Cisco Device Memory
+
+Cisco routers and switches have 4 built-in memory locations:
+- ROM - Read Only Memory
+  - When the device is powered on, it will first load from ROM
+  - Two main functions are performed
+    1. Power On Self Test
+    2. Load Bootstrap
+  - The botostrap will look in flash for an IOS software image to load
+  - If an IOS iamge cannot be found the device will show the ROMMON prompt at the command line
+  - ROMMON or ROM Monitor can be used to recover a missing or corrupted software image
+  - In this case you can boot from USB or an external TFTP server to recover the device
+  - You can also search for ROMMON Recovery for your specific device model, you can find the instructions here.
+- Flash - Removable CompactFlash
+  - The system will load the first IOS image found in Flash by default
+  - You can override this with the _Boot System_ command, to get to a new image
+  - You can copy additional IOS system images to Flash via TFTP or USB
+- NVRAM - Non-Volatile Random Access Memory
+  - When the system has finished loading the IOS system image from Flash, it will load the "startup-config" configuration file from NVRAM
+  - The saved startup-config becomes the current running-config in RAM
+  - If no startup-config file is found, the device will load the Setup Wizard
+  - Whenever you enter a command in IOS it takes effect immediately and goes into the "running-config" which is stored in RAM
+  - To make change permanent across a reboot:
+    - _Copy Running-Config Startup-Config_
+- RAM - Random Access Memory
+  - The IOS system image and startup-config are loaded from Flash and NVRAM into RAM during the bootup
+  - RAM is used as the normal working memory of the device
+  - ROM, Flash, NVRAM are permanent memory, their contents are not lost when the device is powered off or rebooted
+  - RAM is volatile memory, meaning its contents are lost when the deivce is powered off
+
+
+### Small Considerations
+
+### VLAN Database
+The VLAN database represented by vlan.dat, is saved in either Flash or NVRAM. This is dependent on the model of the switch
+
+### Booting from TFTP
+
+The system can also load a system image and/or startup-config from an external TFTP server instead of Flash/NVRAM, but generally this is not recommended because the device will nto be able to boot if it loses connectivity to the server.
+It is usually used where the device does not have enough capacity in Flash to save the system image
+
+
+# Factory Rest and Password Recovery
+
