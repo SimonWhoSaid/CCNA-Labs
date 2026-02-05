@@ -23,6 +23,7 @@ Now that is done we will need to create Access Ports for the VLANs on the switch
 <img width="309" height="118" alt="image" src="https://github.com/user-attachments/assets/dd050e63-5ab6-49dd-a3ab-12c7e97a3741" />
 
 Then we can confirm the VLAN that we set up. 
+
 <img width="595" height="224" alt="image" src="https://github.com/user-attachments/assets/b80f170a-5379-4650-85ed-64f622a5b87a" />
 
 Over on interface f0/10 we need to set up the link as a trunk link. This allows this link to have multiple VLANs sent across it.
@@ -30,6 +31,7 @@ Over on interface f0/10 we need to set up the link as a trunk link. This allows 
 <img width="623" height="181" alt="image" src="https://github.com/user-attachments/assets/69e2da47-a8f0-44b5-b319-99634dbf61eb" />
 
 Now we confirm if the interface is all set up correctly. With _show interface trunk_
+
 <img width="485" height="155" alt="image" src="https://github.com/user-attachments/assets/632e4bb2-a4b1-402f-8dbc-befa1744c920" />
 
 Time to configure switch 2 with the same steps, except we will not be making access ports. Instead we will make 2 trunk ports for f0/12 and g0/1.
@@ -43,12 +45,15 @@ Time to configure switch 2 with the same steps, except we will not be making acc
 In Ross Bagurdes' video he works on a layer 3 switch, but in Cisco Packet Tracer it does not allow you to create sub-interfaces on layer 3 switches. So we will be using a router.
 
 On the router we want to enable _IP routing_ then enter the interface of g0/1 and enable the interface with a _no shutdown_
+
 <img width="444" height="123" alt="image" src="https://github.com/user-attachments/assets/53113655-2785-4c6d-b4dd-d0169efbb36c" />
 
 While still in the interface we want to create a sub-interface and specify the type of encapsulation we will be doing. We will use _encapsulation dot1q_
+
 <img width="330" height="157" alt="image" src="https://github.com/user-attachments/assets/1f3c5d6d-0978-4326-9118-98e8e54d29f1" />
 
 Then in the sub-interfaces we want to create an IP address of the default gateway. Remember when configuring a router's interface it is always important to use _no shut_.
+
 <img width="616" height="381" alt="image" src="https://github.com/user-attachments/assets/83fd613f-4d1c-4e56-8dd1-e793d4bc0e5b" />
 
 Then we can double check all of our work is done with _show ip route_
