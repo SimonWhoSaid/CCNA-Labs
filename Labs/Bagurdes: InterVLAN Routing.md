@@ -62,6 +62,7 @@ Then we can double check all of our work is done with _show ip route_
 
 
 After all of this has been completed we can go back to our PCs and attempt to ping the other PC. Since we can confirm that PC1 can ping PC2 we know that there is a two connection being established.
+
 <img width="432" height="368" alt="image" src="https://github.com/user-attachments/assets/bf0192db-1826-4c01-b296-6f9271e7d4d6" />
 
 
