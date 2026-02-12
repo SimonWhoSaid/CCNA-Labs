@@ -1,3 +1,5 @@
+# Configuring InterVLAN Routing
+
 We will be configuring InterVLAN Routing in this lab.
 
 Here is our lab diagram and we want to have PC1 be able to ping PC2. Because PC1 and PC 2 are on different networks we need to configure everything so that they are able to communicate with each other.
@@ -66,3 +68,8 @@ After all of this has been completed we can go back to our PCs and attempt to pi
 <img width="432" height="368" alt="image" src="https://github.com/user-attachments/assets/bf0192db-1826-4c01-b296-6f9271e7d4d6" />
 
 
+# Identifying a Misconfigured Trunk Port on a Network
+
+Go into each switch and use the command _show vlan_ and _show int trunk_ then we can verify which device has the missing vlans on them.
+
+# Changing the SVI State
