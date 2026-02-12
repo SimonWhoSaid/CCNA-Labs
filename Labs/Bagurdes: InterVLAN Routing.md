@@ -73,3 +73,10 @@ After all of this has been completed we can go back to our PCs and attempt to pi
 Go into each switch and use the command _show vlan_ and _show int trunk_ then we can verify which device has the missing vlans on them.
 
 # Changing the SVI State
+
+
+# Adding a VLAN and What Can Go Wrong
+
+_switchport trunk allowed vlan add (vlan#)_
+
+_int range f0/12 , g0/1_ will allow us to configure both interfaces at the same time, with the same commands.
